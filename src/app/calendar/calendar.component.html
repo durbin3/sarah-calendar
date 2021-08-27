@@ -1,0 +1,17 @@
+<div class='calendar-header'>
+    <p class='title'>{{month.name}}</p>
+    <div class='day-titles'>
+        <p>Sunday</p>
+        <p>Monday</p>
+        <p>Tuesday</p>
+        <p>Wednesday</p>
+        <p>Thursday</p>
+        <p>Friday</p>
+        <p>Saturday</p>
+    </div>
+</div>
+<div class='week' *ngFor='let week of weeks; let w = index'>
+    <div class='day' *ngFor='let day of week; let d = index'>
+        <app-day [number]='(1+d)+(w*7)'></app-day>
+    </div>
+</div>
